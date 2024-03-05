@@ -1,0 +1,27 @@
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
+
+
+
+//useEffect(() => {
+	// 	if (openNav && window.innerWidth <= 968) {
+	// 		document.body.style.overflow = "hidden";
+	// 	} else {
+	// 		document.body.style.overflow = "auto";
+	// 	}
+
+	// 	return () => {
+	// 		document.body.style.overflow = "auto";
+	// 	};
+	// }, [openNav]);

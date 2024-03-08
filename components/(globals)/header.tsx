@@ -1,12 +1,30 @@
+"use client";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
+import Cart from "./cart";
 
 export default function Header() {
+	const headerRef = useRef<HTMLDivElement | null>(null);
+	const tl = useRef<gsap.core.Timeline | null>(null);
+
+	useGSAP(() => {
+		tl.current = gsap.timeline();
+
+		tl.current.to(headerRef.current, {
+			y: 0,
+			duration: 1,
+			opacity: 1,
+			ease: "bounce.out",
+		});
+	});
 	return (
-		<header>
+		<header ref={headerRef} className="opacity-0 -translate-y-10">
 			<nav className="absolute top-0 w-full backdrop-blur-xl h-[4rem] flex px-4">
 				<ul className="mx-auto max-w-[1150px] flex justify-between items-center w-full">
-					<li className="font-bold">
+					<Link href={"/"} className="font-bold">
 						<Image
 							src={"/logo.png"}
 							alt="logo-image"
@@ -14,7 +32,7 @@ export default function Header() {
 							height={500}
 							className="w-[25px] h-[25px] object-cover"
 						/>
-					</li>
+					</Link>
 
 					<ul className="hidden gap-5  text-black md:flex nunito">
 						<Link href="/" className="capitalize text-sm font-medium">
@@ -38,23 +56,8 @@ export default function Header() {
 						</Link>
 					</ul>
 
-					<li className="cursor-pointer">
-						<svg
-							aria-hidden="true"
-							fill="none"
-							focusable="false"
-							width="20"
-							className="header__nav-icon icon icon-cart"
-							viewBox="0 0 24 24"
-						>
-							<path
-								d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
-								stroke="currentColor"
-								stroke-width="1.8"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							></path>
-						</svg>
+					<li>
+						<Cart />
 					</li>
 				</ul>
 			</nav>

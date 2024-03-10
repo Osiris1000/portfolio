@@ -16,7 +16,7 @@ export default function MobileNav() {
 
 		tl.current
 			.to(navRef.current, {
-				duration: 1,
+				duration: 0.8,
 				ease: "power4.inOut",
 				clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 				pointerEvents: "all",
@@ -24,7 +24,7 @@ export default function MobileNav() {
 			.from(
 				".menu__item",
 				{
-					duration: 2,
+					duration: 1.7,
 					delay: 0,
 					x: -100,
 					opacity: 0,
@@ -46,9 +46,9 @@ export default function MobileNav() {
 					},
 					ease: "Expo.easeOut",
 				},
-				"-=1.1"
+				"-=1.4"
 			);
-	});
+	}, []);
 
 	const toggleNavOpen = () => {
 		tl.current?.play();
@@ -63,8 +63,9 @@ export default function MobileNav() {
 	};
 
 	return (
-		<nav className="fixed bottom-20 right-20 md:hidden">
+		<nav className="fixed bottom-20 right-20 md:hidden z-[900] ">
 			<Button
+				name="mobile-menu-toggle-button"
 				className="toggle__btn backdrop-blur-xl h-16 w-16 flex items-center text-black bg-transparent justify-center absolute rounded-full hover:bg-transparent z-50 shadow-sm transition-all duration-700 ease-in-out"
 				onClick={toggleMenuIcon}
 			>
@@ -80,7 +81,7 @@ export default function MobileNav() {
 
 			<div
 				ref={navRef}
-				className={`z-30 backdrop-blur-2xl text-black  fixed overflow-hidden inset-0 h-[100svh] pointer-events-none`}
+				className={`backdrop-blur-2xl text-black  fixed overflow-hidden inset-0 h-[100svh] pointer-events-none`}
 				style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
 			>
 				<ul className="flex flex-col gap-12 bottom-32 z-40 absolute left-5 group ">
@@ -120,7 +121,7 @@ export default function MobileNav() {
 				<div className="absolute left-5 bottom-6">
 					<div className="flex items-center gap-4 text-sm font-bold md:text-xl justify-items-end">
 						<Link
-							href={"https://twitter.com/osirisdigitalagency"}
+							href={"https://twitter.com/Osiris_Digital"}
 							target="_blank"
 							className="uppercase socials "
 						>
@@ -128,14 +129,14 @@ export default function MobileNav() {
 						</Link>
 						<Link
 							className="uppercase socials "
-							href={"https://twitter.com/osirisdigitalagency"}
+							href={"https://twitter.com/Osiris_Digital"}
 							target="_blank"
 						>
 							Behance
 						</Link>
 						<Link
 							className="uppercase socials"
-							href={"https://twitter.com/osirisdigitalagency"}
+							href={"https://twitter.com/Osiris_Digital"}
 							target="_blank"
 						>
 							Github

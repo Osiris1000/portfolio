@@ -9,8 +9,6 @@
 	width: 0;
 	height: 0;
 }
-/* :root {
-} */
 
 @layer base {
 	:root {
@@ -20,8 +18,8 @@
 		--blue: #1669fe;
 
 		--h1: clamp(60px, 4vw, 6rem);
-		--h2: calc(var(--h1) * 0.8);
-		--h3: calc(var(--h1) * 0.7);
+		--h2: calc(var(--h1) * 0.7);
+		--h3: calc(var(--h1) * 0.5);
 		--p: calc(var(--h1) * 0.3);
 		--sub__text: calc(var(--h1) * 0.1);
 
@@ -30,6 +28,7 @@
 		--quicksand: "Quicksand", sans-serif;
 		--jost: "Jost", sans-serif;
 		--nunito: "Nunito", sans-serif;
+
 		--background: 0 0% 100%;
 		--foreground: 0 0% 3.9%;
 
@@ -97,48 +96,67 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground font-secondary  overflow-x-hidden;
+		@apply bg-background text-foreground  overflow-x-hidden;
 	}
-	.gradient-button {
-		background-image: linear-gradient(to right, #9d2ce4, #ff5733);
+	a {
+		font-family: var(--nunito);
 	}
 
-	a {
-		font-family: var(--quicksand);
+	.video__container::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: radial-gradient(
+			circle farthest-corner at right,
+			transparent -10%,
+			white 100%
+		);
 	}
+	.video__container::after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		left: 0;
+		right: 0;
+		background: linear-gradient(to bottom, transparent, white);
+	}
+	.left__shader {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		width: 80px;
+		height: 100%;
+		background: linear-gradient(to left, transparent, white);
+	}
+
 	h1 {
 		font-family: var(--montserrat);
-		font-size: var(--h1);
-		font-weight: 700;
 		letter-spacing: -0.975px;
 		line-height: 130%;
 	}
 	h2 {
-		font-size: var(--h2);
-		font-weight: 600;
-		font-family: var(--montserrat);
+		font-family: var(--nunito);
 		line-height: 130%; /* 71.5px */
 		letter-spacing: -0.825px;
-		font-family: var(--nunito);
 	}
 	h3 {
-		font-size: var(--h3);
 		font-family: var(--montserrat);
-		font-weight: 500;
 		line-height: 130%; /* 58.5px */
 		letter-spacing: -0.675px;
 	}
 
 	p {
 		font-family: var(--nunito);
-		font-size: var(--p);
-		font-weight: 400;
 		line-height: 170%;
 		letter-spacing: -0.19px;
 	}
 
 	.small_text {
-		font-family: var(--);
+		font-family: var(--quicksand);
 	}
 }
 @layer utilities {
@@ -167,9 +185,17 @@
 			transform: rotate(-90deg); /* Rotate -360 degrees (counter-clockwise) */
 		}
 	}
-}
 
-/* style={{ clipPath: "polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)" }} */
-/* clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-ease: "Power2.easeOut", */
-/* polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) */
+	@media screen and (max-width: 768px) {
+		.video__container::before {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				circle farthest-corner at center,
+				transparent -10%,
+				white 100%
+			);
+		}
+	}
+}

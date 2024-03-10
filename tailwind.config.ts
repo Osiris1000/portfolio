@@ -24,13 +24,6 @@ const config = {
 			xl: "1280px",
 			"2xl": "1400px",
 		},
-		fontFamily: {
-			primary: ["var(--font-primary)", "sans-serif"],
-			secondary: ["var(--font-secondary)", "sans-serif"],
-			montserrat: ["var(--font-montserrat)", "sans-serif"],
-			jost: ["var(--font-jost)", "sans-serif"],
-		},
-
 		extend: {
 			colors: {
 				border: "hsl(var(--border))",

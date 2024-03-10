@@ -25,3 +25,28 @@ gsap.ticker.lagSmoothing(0)
 	// 		document.body.style.overflow = "auto";
 	// 	};
 	// }, [openNav]);
+
+
+
+const SEOCONFIG: DefaultSeoProps = {
+	defaultTitle:
+		"Crafting compelling websites, building brands, orchestrating online presences. Your go-to for seamless design, development, and holistic brand solutions",
+	titleTemplate: "Osiris Digital Agency |'%s",
+	description:
+		"Osiris Digital Agency empowers brands to thrive in the digital landscape. We craft exceptional design solutions and data-driven strategies that elevate your brand presence, drive conversions, and achieve your marketing goals.",
+	canonical: "https://osirisdigitalagency.vercel.app/",
+	openGraph: {
+		type: "website",
+		locale: "en_IE",
+		url: "https://osirisdigitalagency.vercel.app/",
+		siteName: "Osiris Digital Agency",
+	},
+	twitter: {
+		handle: "@Osiris_Digital",
+		site: "@Osiris_Digital",
+		cardType: "summary_large_image",
+	},
+};
+
+
+			<nav className="absolute top-0 w-full backdrop-blur-xl h-[4rem] flex px-4  z-[900000]">

@@ -10,10 +10,7 @@ import {
 	SheetFooter,
 	SheetTitle,
 	SheetDescription,
-} from "../../components/ui/sheet";
-import Image from "next/image";
-
-import cartImage from "../../public/animated-cart-bag.svg";
+} from "../ui/sheet";
 
 import CartSvg from "./cart-svg";
 

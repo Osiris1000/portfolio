@@ -3,6 +3,7 @@ import React from "react";
 export default function CartSvg() {
 	return (
 		<svg
+			name="shopping bag"
 			aria-hidden="true"
 			fill="none"
 			focusable="false"

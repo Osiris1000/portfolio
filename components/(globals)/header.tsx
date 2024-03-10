@@ -3,10 +3,14 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import Cart from "./cart";
+import { ModeToggle } from "../../providers/theme/mode-toggle";
+import Logo from "@/providers/svgs/logo";
+import { useTheme } from "next-themes";
 
 export default function Header() {
+	const { theme } = useTheme();
 	const headerRef = useRef<HTMLDivElement | null>(null);
 	const tl = useRef<gsap.core.Timeline | null>(null);
 
@@ -19,12 +23,15 @@ export default function Header() {
 			opacity: 1,
 			ease: "bounce.out",
 		});
-	});
+	}, []);
 	return (
-		<header ref={headerRef} className="opacity-0 -translate-y-10">
-			<nav className="absolute top-0 w-full backdrop-blur-xl h-[4rem] flex px-4">
-				<ul className="mx-auto max-w-[1150px] flex justify-between items-center w-full">
-					<Link href={"/"} className="font-bold">
+		<header
+			ref={headerRef}
+			className="opacity-0 -translate-y-10 fixed top-0 w-full backdrop-blur-xl "
+		>
+			<nav className=" w-full backdrop-blur-xl h-[4rem] flex px-4">
+				<menu className="mx-auto max-w-[1150px] flex justify-between items-center w-full">
+					<Link href={"/"}>
 						<Image
 							src={"/logo.png"}
 							alt="logo-image"
@@ -34,7 +41,7 @@ export default function Header() {
 						/>
 					</Link>
 
-					<ul className="hidden gap-5  text-black md:flex nunito">
+					<menu className="hidden gap-5  text-black md:flex nunito">
 						<Link href="/" className="capitalize text-sm font-medium">
 							home
 						</Link>
@@ -54,12 +61,12 @@ export default function Header() {
 						<Link href="/" className=" capitalize text-sm font-medium">
 							Connect
 						</Link>
-					</ul>
+					</menu>
 
 					<li>
 						<Cart />
 					</li>
-				</ul>
+				</menu>
 			</nav>
 		</header>
 	);

@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { Button } from "../ui/button";
 
 export default function Herosection() {
 	const heroRef = useRef<HTMLDivElement | null>(null);
@@ -13,7 +14,7 @@ export default function Herosection() {
 		tl.current = gsap.timeline();
 		tl.current
 			.to(heroRef.current, {
-				duration: 3,
+				duration: 2,
 				ease: "power2.out",
 				clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
 				pointerEvents: "all",
@@ -21,12 +22,12 @@ export default function Herosection() {
 			.to(
 				heroTitleRef.current,
 				{
-					duration: 3,
+					duration: 2,
 					ease: "power4.out",
 					opacity: 1,
-					x: 0,
+					y: 0,
 				},
-				"-=3"
+				"-=2"
 			)
 			.to(
 				herosubTitleRef.current,
@@ -36,7 +37,17 @@ export default function Herosection() {
 					opacity: 1,
 					y: 0,
 				},
-				"-=3"
+				"-=2"
+			)
+			.to(
+				".cta",
+				{
+					duration: 1,
+					y: 0,
+					opacity: 1,
+					ease: "powe4.inOut",
+				},
+				"-=1.5"
 			);
 	}, []);
 	return (
@@ -55,16 +66,15 @@ export default function Herosection() {
 						muted
 						loop
 						autoPlay
-						className=" w-full h-full object-cover "
-						// pt-10 md:pt-0
+						className="object-cover w-full h-full "
 						style={{ backgroundPosition: "center" }}
 					>
 						<source src="/new-hero.mp4" type="video/mp4" />
 					</video>
 				</div>
-				<div className="text-center lg:text-left lg:pl-12 px-4 md:px-0 pt-16 lg:pt-0">
+				<div className="mx-5 pt-16 text-center lg:text-left lg:pl-12 md:px-0 lg:pt-0">
 					<h1
-						className="text-[2.3rem] font-bold opacity-0 -translate-x-[500px] "
+						className="text-[2.3rem] font-bold opacity-0 -translate-y-[50px] "
 						ref={heroTitleRef}
 					>
 						Is Your Website Stuck in the Past?{" "}
@@ -73,7 +83,7 @@ export default function Herosection() {
 						<span className="bg-[var(--blue)] text-white uppercase px-[2px]">
 							Transform
 						</span>{" "}
-						and Thrive again. .{/* Feeling Lost in the Digital Jungle? */}
+						and Thrive again...
 					</h1>
 
 					<h2
@@ -81,28 +91,18 @@ export default function Herosection() {
 						ref={herosubTitleRef}
 					>
 						We craft conversion machines designed to turn{" "}
-						<span className="text-black font-semibold">website traffic</span>{" "}
+						<span className="font-semibold text-black">website traffic</span>{" "}
 						into loyal customers, driving sales nonstop and propelling your{" "}
-						<span className="text-black font-semibold">
+						<span className="font-semibold text-black">
 							sales on autopilot.
 						</span>
-						{/* <br className="hidden md:block" /> {" "} */}
 					</h2>
 
-					{/* <p className="text-[#787878] mt-6 text-[1.1rem]">
-						Make your website a relentless{" "}
-						<span className="opacity-100 text-black">sales advocate</span>,
-						tirelessly persuading visitors to make{" "}
-						<span className=" text-black"> purchases </span>
-						and boosting sales &nbsp;
-						<span className="text-black">automatically.</span>
-					</p> */}
-					{/* <p>
-						Are you feeling stuck with your current website or lost in the
-						digital landscape? Whether you're already online, considering a
-						redesign, or starting fresh, unlock the potential for exponential
-						growth and increased sales by optimizing your online presence.
-					</p> */}
+					<div className="flex items-center justify-center mt-10 space-x-10 md:justify-start">
+						<Button className="w-full max-w-[350px] cta opacity-0 translate-y-5 py-6 bg-[var(--blue)] rounded-3xl px-8 hover:bg-[#1667fe]/80 text-lg font-bold">
+							Book a FREE strategy call
+						</Button>
+					</div>
 				</div>
 			</div>
 		</section>

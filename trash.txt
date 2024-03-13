@@ -50,3 +50,51 @@ const SEOCONFIG: DefaultSeoProps = {
 
 
 			<nav className="absolute top-0 w-full backdrop-blur-xl h-[4rem] flex px-4  z-[900000]">
+
+
+            	{/* <p className="text-[#787878] mt-6 text-[1.1rem]">
+						Make your website a relentless{" "}
+						<span className="opacity-100 text-black">sales advocate</span>,
+						tirelessly persuading visitors to make{" "}
+						<span className=" text-black"> purchases </span>
+						and boosting sales &nbsp;
+						<span className="text-black">automatically.</span>
+					</p> */}
+					{/* <p>
+						Are you feeling stuck with your current website or lost in the
+						digital landscape? Whether you're already online, considering a
+						redesign, or starting fresh, unlock the potential for exponential
+						growth and increased sales by optimizing your online presence.
+					</p> */}
+
+
+
+Forget Traffic. We Focus on What Truly Matters: Conversions.
+
+High website traffic is meaningless without a plan to convert visitors into paying customers. We bridge the gap with proven strategies.
+
+
+Title: Forget Traffic. We Focus on What Truly Matters: Conversions.
+
+Subtitle:  High website traffic is meaningless without a plan to convert visitors into paying customers. We bridge the gap with proven strategies.
+
+
+
+Lost in the Digital Crowd:
+<Gem />
+<Shapes />
+ Today's digital landscape is saturated. Cutting through the noise and capturing audience attention requires a strategic approach to set your brand apart.
+
+
+ Leads Not Converting:
+
+ Attracting visitors is just the first step. Are they converting into leads? Traditional methods might not resonate with your target audience. We help bridge the gap with targeted strategies.
+
+
+
+<Handshake />
+
+Clicks Don't Equal Customers
+ Beyond Clicks: Building Customer Loyalty:
+
+ Clicks are valuable, but true success lies in converting them into loyal customers. We help you navigate the conversion challenge and build lasting customer relationships.

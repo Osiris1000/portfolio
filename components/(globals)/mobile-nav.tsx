@@ -81,7 +81,7 @@ export default function MobileNav() {
 
 			<div
 				ref={navRef}
-				className={`backdrop-blur-2xl text-black  fixed overflow-hidden inset-0 h-[100svh] pointer-events-none`}
+				className={`backdrop-blur-2xl text-black fixed overflow-hidden inset-0 pointer-events-none`}
 				style={{ clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)" }}
 			>
 				<ul className="flex flex-col gap-12 bottom-32 z-40 absolute left-5 group ">

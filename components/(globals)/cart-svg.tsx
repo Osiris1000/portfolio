@@ -1,23 +1,54 @@
 import React from "react";
 
-export default function CartSvg() {
+export default function Test() {
 	return (
-		<svg
-			name="shopping bag"
-			aria-hidden="true"
-			fill="none"
-			focusable="false"
-			width="24"
-			className="header__nav-icon icon icon-cart"
-			viewBox="0 0 24 24"
-		>
-			<path
-				d="M4.75 8.25A.75.75 0 0 0 4 9L3 19.125c0 1.418 1.207 2.625 2.625 2.625h12.75c1.418 0 2.625-1.149 2.625-2.566L20 9a.75.75 0 0 0-.75-.75H4.75Zm2.75 0v-1.5a4.5 4.5 0 0 1 4.5-4.5v0a4.5 4.5 0 0 1 4.5 4.5v1.5"
-				stroke="currentColor"
-				stroke-width="1.8"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-			></path>
-		</svg>
+		<div className="content px-5">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis hic, a
+			velit laborum doloremque commodi veniam explicabo? Dolores, esse. Nulla,
+			odio molestias porro error ipsa excepturi debitis eaque quia aliquid,
+			voluptatibus magni quae minus fuga vitae tempore possimus iste totam sunt,
+			culpa nobis? Dolor illum recusandae at nam aliquid quaerat dicta fuga?
+			Quas magni reiciendis natus aspernatur minus! Placeat dolor qui earum
+			nihil, error pariatur voluptates accusamus. Assumenda, pariatur? Minus
+			quam assumenda quas eius! Commodi dignissimos, laudantium deleniti
+			cupiditate dolorum maxime, exercitationem, nisi consequuntur mollitia
+			ullam vero! Possimus dolorem debitis magnam delectus impedit minima
+			incidunt facilis magni vero architecto. Non illo nesciunt eos recusandae
+			consequuntur modi tempora repellendus, eligendi vel sunt neque aut
+			blanditiis distinctio soluta culpa delectus. Minus quae, excepturi facere
+			eius vitae rem error? Minus dolore, atque voluptates modi ipsam rem sit
+			quam doloremque laboriosam distinctio deserunt nisi omnis adipisci
+			repellendus tempore aspernatur totam consectetur maxime officiis obcaecati
+			ab excepturi asperiores? Repellendus itaque ab neque dignissimos deleniti,
+			quis ipsum maxime accusantium? Unde recusandae neque commodi? Laboriosam,
+			labore ea sapiente voluptatum, accusamus voluptatem dicta ad alias commodi
+			similique quod explicabo praesentium sint laudantium dolorum beatae magni
+			cumque assumenda impedit soluta eaque accusantium esse? Provident numquam
+			beatae corrupti aspernatur, modi incidunt corporis aperiam assumenda
+			blanditiis autem voluptate voluptas sunt praesentium dicta, nemo magnam,
+			iure est nam obcaecati debitis nesciunt. Necessitatibus alias vel a ipsam
+			eum, distinctio culpa ducimus repellat laudantium impedit, quos
+			exercitationem maxime. Distinctio nam natus fugit tempore quas explicabo
+			harum. Temporibus nesciunt ipsum in, debitis exercitationem officiis sed
+			quam non unde blanditiis suscipit qui. Est numquam, suscipit soluta iusto
+			minus, esse odit sit illo unde voluptates aperiam laudantium error.
+			Commodi, nostrum fugit perferendis corporis quis, blanditiis rem ad sint
+			voluptate optio excepturi vitae. Reiciendis sint assumenda voluptates
+			earum, a non quam! Provident, reiciendis esse voluptatem quae rerum quis
+			accusamus, repudiandae aperiam non iure autem vero? Quos natus qui quae
+			dolor quasi labore. Corrupti repellat nihil at doloribus, dolorem laborum
+			possimus. Esse modi, sit eligendi aspernatur natus sunt maxime
+			perspiciatis corporis ipsa sint? Doloremque quasi sunt ut aliquam eos
+			quibusdam nulla eum! Quae quidem natus dignissimos minus! Iure vitae,
+			deleniti libero sunt illo perferendis molestias temporibus reiciendis
+			ipsum, asperiores quaerat quas sint tempora iste, voluptatem inventore
+			necessitatibus nemo. Neque corporis, ea unde similique adipisci sequi quis
+			possimus doloremque deleniti in nam dolore facere! Accusantium eum saepe
+			esse inventore, minus laudantium alias vitae voluptatum quia aspernatur
+			deserunt animi amet laborum nisi, error expedita numquam, sequi corrupti
+			rerum molestias tempore. Cum aliquid dolorem ut, minima error libero
+			quibusdam autem vitae. In vitae sed, autem eligendi quam incidunt beatae
+			libero a harum.
+		</div>
 	);
 }

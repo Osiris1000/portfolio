@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/(globals)/header";
 import MobileNav from "@/components/(globals)/mobile-nav";
+import Smoothscroll from "@/components/(globals)/smooth-scroll";
 
 const icons = [
 	{ rel: "icon", url: "/favicon-32x32.png" },

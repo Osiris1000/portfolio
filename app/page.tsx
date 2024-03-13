@@ -1,5 +1,4 @@
 import Test from "@/components/(globals)/cart-svg";
-import Layout from "@/components/(globals)/smooth-scroll";
 import Carousel from "@/components/(homepage)/carousel";
 import Herosection from "@/components/(homepage)/hero-section";
 import ProblemsAndSolutions from "@/components/(homepage)/problems-and-solutuions";

@@ -15,7 +15,7 @@
 		--yellow: #ffca42;
 		--white: #f6f8fc;
 		--ash: #969aa0;
-		--blue: #1669fe;
+		--blue: #1667fe;
 
 		--h1: clamp(60px, 4vw, 6rem);
 		--h2: calc(var(--h1) * 0.7);
@@ -96,7 +96,7 @@
 		@apply border-border;
 	}
 	body {
-		@apply bg-background text-foreground  overflow-x-hidden;
+		@apply overflow-x-hidden bg-background text-foreground;
 	}
 	a {
 		font-family: var(--nunito);
@@ -144,7 +144,7 @@
 		letter-spacing: -0.825px;
 	}
 	h3 {
-		font-family: var(--montserrat);
+		font-family: var(--nunito);
 		line-height: 130%; /* 58.5px */
 		letter-spacing: -0.675px;
 	}
@@ -160,12 +160,44 @@
 	}
 }
 @layer utilities {
+	/* .marquee {
+		mask-image: linear-gradient(
+			to right,
+			hsl(0% 0% 0% / 0),
+			hsl(0% 0% 0% / 1) 10%,
+			hsl(0% 0% 0% / 1) 90%,
+			hsl(0% 0% 0% / 0)
+		);
+	} */
+	.marquee::after,
+	.marquee::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 200px;
+	}
+	.marquee::before {
+		left: 0;
+		top: 0;
+		background: linear-gradient(to right, white, transparent);
+		z-index: 6;
+	}
+	.marquee::after {
+		right: 0;
+		top: 0;
+		background: linear-gradient(to right, transparent, #ffffff);
+	}
+
 	.animate__rotateIn {
 		animation: animate__rotateIn 0.6s ease-in-out forwards;
 	}
 
 	.animate__rotateOut {
 		animation: animate__rotateOut 0.6s ease-in-out forwards;
+	}
+
+	.logo_carousel {
+		animation: carousel 60s linear infinite;
 	}
 
 	@keyframes animate__rotateIn {
@@ -183,6 +215,16 @@
 		}
 		to {
 			transform: rotate(-90deg); /* Rotate -360 degrees (counter-clockwise) */
+		}
+	}
+
+	@keyframes carousel {
+		from {
+			left: translateX(0);
+		}
+
+		to {
+			transform: translateX(-100%);
 		}
 	}
 
